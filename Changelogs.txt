@@ -1,0 +1,64 @@
+Working on:
+
+ChangeLogs
+3/9 IMPORT SUCCESSFULY xlstoAccess now make button and import xls into database :)
+3/8 change connection URL to jdbc:odbc:Driver={MicroSoft Access Driver (*.mdb)};DBQ=lab_db.accdb
+3/7 JMenu added with Icons, Administrator Panel added, New decoration, instructions, using BlackMoon Synethetica Look and Feel,
+Admin: Admin able to update and delete logs, also manage student profiles, all fields are validate
+Security: using PreparedStatements to avoid SQLInjection,
+Security: Added password for adminmode!  If idle for 5 minutes log out admin, mask first 3 numbers of ID for guest mode, show all of ID in admin mode
+Filter:  Added a search filter for jlist of student names
+Removed Rollback and Commit
+
+Future Updates:
+Removed Google Drive Integration (might add back in later)
+Might Implement Cron Scheduler to preform weekly tasks, create folder to put in for week of monday-thursday
+Might Implement Sharepoint online database but no necessary
+Might Implement a Safe Mode
+
+2/22 Got rid of unnecessary importing of multiple jars just set CLASSPATH = ./;*;./libs;./libs/*; 
+2/22 Got Uploading to Google Docs Working :)
+2/22 Added MouseClick Function so SignOut could be disabled and database would not retrieve error
+2/22 New SyntheticLookandFeel Layout
+2/21 Got Cron Scheduler Working
+2/21 Got Emailing with Attachment Working
+ - emailing acheieved with @gmailaccount
+ - then sent with attachment user chooses
+2/20 Implemented BETWEEN startdate AND enddate date range in query to query using BETWEEN
+
+
+IMPORTANT STUFF TO KNOW!
+
+set the classpath
+
+CLASSPATH UPDATE:
+use ./;*;./libs;./libs/*; to get all jars and files within folder
+
+CLASSPATH
+
+=C:\Users\Chino\Desktop\alternatelook;poi-3.9-20121203.jar;mail.jar;javax.servlet.jar;
+quartz-all-1.7.3.jar;quartz-1.7.3.jar;commons-beanutils-1.8.2.jar;commons-dbcp-1.2.2.jar;commons-digester-1.8.1.jar;
+commons-logging-1.1.jar;commons-modeler-2.0.1.jar;commons-pool-1.3.jar;commons-validator-1.3.1.jar;log4j-1.2.14.jar;log4j.properties
+synthetica.jar;syntheticaBlackEye.jar;syntheticaBlackMoon.jar;syntheticaBlackStar.jar;syntheticaClassy.jar 
+
+Using Access Database:
+
+Setup odbc driver - > DriverName: mdbTEST
+Database consists of two tables
+Students:  id firstname lastname
+Logs: datestamp id signin signout
+
+
+Google Client
+
+Client ID for installed applications
+Client ID:	
+987856677950.apps.googleusercontent.com
+Client secret:	
+c6vTqTLlJ5UwMpHPAGojkIv4
+Redirect URIs:	urn:ietf:wg:oauth:2.0:oob
+http://localhost
+
+Add jars
+
+google-api-services-drive-v2-rev55-1.13.2-beta.jar;google-api-services-drive-v2-rev55-1.13.2-beta-javadoc.jar;google-api-services-drive-v2-rev55-1.13.2-beta-sources.jar

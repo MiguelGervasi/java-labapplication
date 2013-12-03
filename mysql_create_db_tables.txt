@@ -1,0 +1,31 @@
+CREATE DATABASE lab_db;
+
+use lab_db
+
+CREATE TABLE Students(
+   id varchar(100) primary key,
+   firstname TEXT,
+   lastname TEXT
+);
+
+CREATE TABLE Employees(
+   id varchar(100) primary key,
+   firstname TEXT,
+   lastname TEXT
+);
+
+
+CREATE TABLE Logs(
+   id TEXT,
+   datestamp TEXT,
+   signin TEXT,
+   signout TEXT
+);
+
+
+CREATE TABLE EmployeeLogs(
+   id TEXT,
+   datestamp TEXT,
+   signin TEXT,
+   signout TEXT
+);
